@@ -2,12 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>NYT</groupId>
   <artifactId>NYT</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <name>NYT Maven</name>
   <description>Maven Build For NYT Exercise Project</description>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <testSourceDirectory>test</testSourceDirectory>
+    <finalName>Run</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -17,6 +18,29 @@
           <target>1.8</target>
         </configuration>
       </plugin>
+      
+	    <plugin>
+	      <artifactId>maven-assembly-plugin</artifactId>
+	      <configuration>
+	        <descriptorRefs>
+	          <descriptorRef>jar-with-dependencies</descriptorRef>
+	        </descriptorRefs>
+	        <archive>
+	          <manifest>
+	            <mainClass>Run</mainClass>
+	          </manifest>
+	        </archive>
+	      </configuration>
+	      <executions>
+	        <execution>
+	          <phase>package</phase>
+	          <goals>
+	            <goal>single</goal>
+	          </goals>
+	        </execution>
+	      </executions>
+	    </plugin>
+    
     </plugins>
   </build>
   <dependencies>
@@ -34,6 +58,12 @@
   		<groupId>com.fasterxml.jackson.core</groupId>
   		<artifactId>jackson-databind</artifactId>
   		<version>2.9.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.junit.jupiter</groupId>
+  		<artifactId>junit-jupiter-api</artifactId>
+  		<version>5.1.0</version>
+  		<scope>test</scope>
   	</dependency>
   </dependencies>
 </project>
