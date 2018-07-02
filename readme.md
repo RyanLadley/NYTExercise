@@ -9,7 +9,7 @@ This Java project was written to solve the NYT take home assignment.
 * [Jackson](https://github.com/FasterXML/jackson) - JSON Parser
 * [JUnit](https://junit.org/junit5/) - Unit Testing
 
-##Build And Run
+## Build And Run
 To package this project, run the following command from the home directory
 ```
 mvn package
