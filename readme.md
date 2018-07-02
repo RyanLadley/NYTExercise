@@ -5,8 +5,27 @@ This Java project was written to solve the NYT take home assignment.
 ## Built With
 * [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
 * [Eclipse](https://www.eclipse.org/) - IDE
+* [Maven](http://maven.apache.org/) - Build 
 * [Jackson](https://github.com/FasterXML/jackson) - JSON Parser
 * [JUnit](https://junit.org/junit5/) - Unit Testing
+
+##Build And Run
+To package this project, run the following command from the home directory
+```
+mvn package
+```
+
+This creates a jar file with the super catchy name 'Run-jar-with-dependencies.jar' in the target folder. 
+
+To run the program, use this command from the home directory
+```
+java -cp target\\Run-jar-with-dependencies.jar Run {file path} {file path}
+```
+This sample command runs the example provided:
+```
+java -cp target\\Run-jar-with-dependencies.jar Run TestResponses\\Default1.json TestResponses\\Default2.json
+```
+
 
 ## My Approach
 
