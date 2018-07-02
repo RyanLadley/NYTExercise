@@ -50,12 +50,12 @@ Along with normal spot checking,  there are several JUnit unit tests which aided
 There are a few items in this code which may have you asking "Why did  you do that?". Let's see if I can answer a few of those.
 
 ### Solid Objects
-Instead of using somethins like JSON.simple's JSONObject, I decided to create a solid Java object for processing. I did this for one simple reason, I find objects like JSONObjects to be error prone since there is very little compiler/IDE support when using these object. I was definetly questioning myself when creating these objects though...
+Instead of using somethins like JSON.simple's JSONObject, I decided to create a solid Java object for processing. I did this for one simple reason: I find objects like JSONObjects to be error prone since they come with very little compiler/IDE support. I was definetly questioning my decision when creating these objects though...
 
 ### Reflection
 
 Instead of using a bunch of If statements to compare the 'primitive' attributes of the objects, I decided to create a Reflection utility. I did this for two reasons. 
-1. It kept the code DRYer. There were a lot of comparisons to be made, this utility funneled the bulk of them into one spot where changes could be made easily. This came in handy when in my spot and unit testing I discovered I missed a few cases
+1. It kept the code "DRYer". There were a lot of comparisons to be made, this utility funneled the bulk of them into one spot where changes could be made easily. This came in handy when in my spot and unit testing I discovered I missed a few cases.
 
 2. Honestly, it was more fun. Writing dozens of comparions sounded tedious. Since I come from a largly C# background, I thought this would be wonderful time to learn how Java does reflection. I was right.
 
